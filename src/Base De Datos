@@ -1,0 +1,50 @@
+CREATE DATABASE IF NOT EXISTS `empleo_db`;
+USE `empleo_db`;
+
+CREATE TABLE `empresas` (
+  `id_empresas` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `direccion` varchar(45) DEFAULT NULL,
+  `cuil` varchar(45) DEFAULT NULL,
+  `telefono` varchar(45) DEFAULT NULL,
+  `rubro` varchar(45) DEFAULT NULL,
+  `ceo` varchar(45) DEFAULT NULL,
+  `actividad` varchar(45) DEFAULT NULL,
+  `descripcion` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_empresas`)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
+
+CREATE TABLE `postulantes` (
+  `id_postulantes` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `apellido` varchar(45) DEFAULT NULL,
+  `edad` varchar(45) DEFAULT NULL,
+  `dni` varchar(45) DEFAULT NULL,
+  `movilidad` varchar(45) DEFAULT NULL,
+  `nivel_educativo` varchar(45) DEFAULT NULL,
+  `sexo` varchar(45) DEFAULT NULL,
+  `perfil` varchar(45) DEFAULT NULL,
+  `cuil` varchar(45) DEFAULT NULL,
+  `domicilio` varchar(45) DEFAULT NULL,
+  `telf_principal` varchar(45) DEFAULT NULL,
+  `telf_alternativo` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `disp_horaria` varchar(45) DEFAULT NULL,
+  `otra_info` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_postulantes`)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
+
+CREATE TABLE `programas` (
+  `id_programas` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `descripcion` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_programas`)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
+
+CREATE TABLE `usuarios` (
+  `id_usuarios` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_usuarios`)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
